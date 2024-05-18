@@ -12,17 +12,37 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TheGame.Database;
 
-namespace TheGame
+namespace TheGame;
+
+/// <summary>
+/// Логика взаимодействия для MainWindow.xaml
+/// </summary>
+public partial class MainWindow : Window
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+
+    public MainWindow()
     {
-        public MainWindow()
+        try
         {
+            var db = GameDbContext.Db;
+            var user = new User()
+            {
+                Birthday = new DateTime(2024, 11, 13),
+                Email = "vad@gamil.com",
+                Password = "12345",
+                NikName = "Vadim"
+            };
+            db.Users.Add(user);
+            db.SaveChanges();
+            var b = db.Users.ToList();
             InitializeComponent();
         }
+        catch(Exception ex)
+        {
+
+        }
+       
     }
 }
