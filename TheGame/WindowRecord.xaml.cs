@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TheGame.Database;
 
 namespace TheGame
 {
@@ -19,9 +20,11 @@ namespace TheGame
     /// </summary>
     public partial class WindowRecord : Window
     {
-        public WindowRecord()
+
+        public WindowRecord(GameDbContext db)
         {
             InitializeComponent();
+            TopGamers.ItemsSource = db.Users.Select(x => new { x.Score, x.Money, x.NikName }).OrderByDescending(x => x.Score).ToList();
         }
 
         private void TopGamers_SelectionChanged(object sender, SelectionChangedEventArgs e)

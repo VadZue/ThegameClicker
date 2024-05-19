@@ -61,4 +61,9 @@ public partial class MainWindow : Window
     {
         _sw.Open<WindowForRegistration>(this);
     }
+
+    private void TbTop_Click(object sender, RoutedEventArgs e)
+    {
+        _sw.Open<WindowRecord>(this);
+    }
 }

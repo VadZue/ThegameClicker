@@ -35,8 +35,9 @@
         <TextBox x:Name="BtnPassword" HorizontalAlignment="Left" Height="21" Margin="76,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Background="{x:Null}" BorderBrush="White" Foreground="White"/>
         <Label Content="Mail" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Height="30" Width="52" Foreground="White" RenderTransformOrigin="0.808,0.301" FontFamily="Algerian" FontSize="14" Background="{x:Null}"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="6,92,0,0" VerticalAlignment="Top" Height="30" Width="70" Background="{x:Null}" Foreground="White" RenderTransformOrigin="0.808,0.301" FontFamily="Algerian" FontSize="11"/>
-        <Button x:Name="BtnForRegistration" Template="{StaticResource NoMouseOverButtonTemplate}" Content="Registration" HorizontalAlignment="Left" Margin="44,211,0,0" VerticalAlignment="Top" Height="29" Width="146" Background="{x:Null}" Foreground="White" FontSize="20" FontFamily="Algerian" BorderBrush="White" Click="BtnForRegistration_Click"/>
-        
+        <Button x:Name="BtnForRegistration" Template="{StaticResource NoMouseOverButtonTemplate}" Content="Registration" HorizontalAlignment="Left" Margin="44,196,0,0" VerticalAlignment="Top" Height="29" Width="146" Background="{x:Null}" Foreground="White" FontSize="20" FontFamily="Algerian" BorderBrush="White" Click="BtnForRegistration_Click"/>
+        <Button x:Name="TbTop" Content="Top Users" HorizontalAlignment="Left" Height="31" Margin="44,241,0,0" VerticalAlignment="Top" Width="146" Background="{x:Null}" BorderBrush="White" Foreground="White" FontFamily="Algerian" FontSize="20" Click="TbTop_Click"/>
+
 
 
     </Grid>

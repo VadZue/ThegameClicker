@@ -5,12 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TheGame"
         mc:Ignorable="d"
-        Title="WindowRecord" Height="423" Width="371"
+        Title="WindowRecord" Height="400" Width="350"
         WindowStartupLocation="CenterScreen">
-    <Grid Margin="0,0,62,0">
-        <Image Source="/Records.png" Stretch="Fill" Margin="0,0,-62,0"/>
-        <DataGrid HorizontalAlignment="Left" Height="335" Margin="73,36,0,0" VerticalAlignment="Top" Width="239"  Background="{x:Null}" 
-        AutoGenerateColumns="True" Name="TopGamers" SelectionChanged="TopGamers_SelectionChanged"/>
+    <Grid>
+        <Image Source="/Records.png" Stretch="Fill"/>
+        <DataGrid HorizontalAlignment="Center"  VerticalAlignment="Top"   Background="{x:Null}" 
+                                                AutoGenerateColumns="False" Name="TopGamers" SelectionChanged="TopGamers_SelectionChanged" Margin="0,44,0,0">
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Name" Binding="{Binding NikName}" />
+                <DataGridTextColumn Header="Score" Binding="{Binding Score}" />
+                <DataGridTextColumn Header="Money" Binding="{Binding Money}" />
+
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Window>
