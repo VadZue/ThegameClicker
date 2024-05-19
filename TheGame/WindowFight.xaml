@@ -5,13 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TheGame"
         mc:Ignorable="d"
-        Title="WindowFight" Height="450" Width="800">
+        Title="WindowFight" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate"   
+                 TargetType="Button">
+            <Border Background="{TemplateBinding Background}"  
+          BorderBrush="{TemplateBinding BorderBrush}"  
+          BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  
+                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Border>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled"  
+             Value="False">
+                    <Setter Property="Background"  
+              Value="{x:Static SystemColors.ControlLightBrush}" />
+                    <Setter Property="Foreground"  
+              Value="{x:Static SystemColors.GrayTextBrush}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
     <Grid>
         <Image Source="/FightMenu.png" Stretch="Fill"/>
-        <Button Content="Button" HorizontalAlignment="Center" Height="268" Margin="0,117,0,0" VerticalAlignment="Top" Width="268" Background="{x:Null}" Click="Button_Click"/>
-        <Button x:Name="BtnTawern" Content="Back to Tawern" HorizontalAlignment="Left" Height="41" Margin="10,10,0,0" VerticalAlignment="Top" Width="168" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" FontFamily="Brush Script MT" FontSize="25"/>
-        <Button x:Name="BtnTawern_Копировать" Content="Back to Tawern" HorizontalAlignment="Left" Height="41" Margin="10,10,0,0" VerticalAlignment="Top" Width="168" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" FontFamily="Brush Script MT" FontSize="25"/>
-        <Label Content="Score" HorizontalAlignment="Left" Height="41" Margin="533,10,0,0" VerticalAlignment="Top" Width="161" Background="{x:Null}" Foreground="White" FontFamily="Brush Script MT" FontSize="27"/>
+        <Button Content="" HorizontalAlignment="Center" Template="{StaticResource NoMouseOverButtonTemplate}" Height="303" Margin="0,96,0,0" VerticalAlignment="Top" Width="530" Background="{x:Null}" Click="Button_Click" Foreground="{x:Null}" BorderBrush="#FF707070" />
+        <Button x:Name="BtnTawern_Копировать" Template="{StaticResource NoMouseOverButtonTemplate}" Content="Back to Tawern" HorizontalAlignment="Left" Height="41" Margin="10,10,0,0" VerticalAlignment="Top" Width="231" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Algerian" FontSize="25"/>
+        <Label Content="Score" HorizontalAlignment="Left" Height="41" Margin="533,10,0,0" VerticalAlignment="Top" Width="97" Background="{x:Null}" Foreground="White" FontFamily="Algerian" FontSize="27"/>
+        <Label Content="Money" HorizontalAlignment="Left" Height="41" Margin="533,51,0,0" VerticalAlignment="Top" Width="97" Background="{x:Null}" Foreground="White" FontFamily="Algerian" FontSize="27"/>
+        <TextBlock x:Name="TbForScore" HorizontalAlignment="Left" Margin="635,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="32" Width="155" Foreground="White" FontSize="27" FontFamily="Algerian"/>
+        <TextBlock x:Name="TbForMoney" HorizontalAlignment="Left" Margin="635,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="33" Width="155" Foreground="White" FontSize="27" FontFamily="Algerian"/>
 
     </Grid>
 </Window>

@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace TheGame
 {
     /// <summary>
-    /// Логика взаимодействия для WindowForRegistration.xaml
+    /// Логика взаимодействия для WindowRecord.xaml
     /// </summary>
-    public partial class WindowForRegistration : Window
+    public partial class WindowRecord : Window
     {
-        public WindowForRegistration()
+        public WindowRecord()
         {
             InitializeComponent();
-        }
-
-        private void BtnRegistration_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

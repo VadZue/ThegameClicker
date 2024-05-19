@@ -7,10 +7,17 @@
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <ItemGroup>
-    <Resource Include="MainMenu.png" />
+    <None Remove="MainMenu.png" />
+    <None Remove="Records.png" />
+    <None Remove="Registration.png" />
+    <None Remove="Shop.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="FightMenu.png" />
+    <Resource Include="MainMenu.png" />
+    <Resource Include="Records.png" />
+    <Resource Include="Registration.png" />
+    <Resource Include="Shop.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ShopMenu.png" />

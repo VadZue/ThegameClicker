@@ -5,17 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TheGame"
         mc:Ignorable="d"
-        Title="WindowForRegistration" Height="450" Width="800">
+        Title="WindowForRegistration" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate"   
+                 TargetType="Button">
+            <Border Background="{TemplateBinding Background}"  
+          BorderBrush="{TemplateBinding BorderBrush}"  
+          BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  
+                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Border>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled"  
+             Value="False">
+                    <Setter Property="Background"  
+              Value="{x:Static SystemColors.ControlLightBrush}" />
+                    <Setter Property="Foreground"  
+              Value="{x:Static SystemColors.GrayTextBrush}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
     <Grid>
-        <Button x:Name="BtnRegistration" Content="Register" HorizontalAlignment="Left" Height="31" Margin="204,231,0,0" VerticalAlignment="Top" Width="122" FontSize="24" FontFamily="Brush Script MT"/>
-        <TextBox HorizontalAlignment="Left" Height="28" Margin="129,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="271"/>
-        <TextBox HorizontalAlignment="Left" Height="28" Margin="129,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="271"/>
-        <TextBox HorizontalAlignment="Left" Height="28" Margin="129,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="271"/>
-        <TextBox HorizontalAlignment="Left" Height="28" Margin="129,171,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="271"/>
-        <Label Content="NikName" HorizontalAlignment="Left" Height="28" Margin="38,72,0,0" VerticalAlignment="Top" Width="71" FontFamily="Brush Script MT" FontSize="18"/>
-        <Label Content="Birthday" HorizontalAlignment="Left" Height="28" Margin="38,105,0,0" VerticalAlignment="Top" Width="61" FontFamily="Brush Script MT" FontSize="18"/>
-        <Label Content="Email" HorizontalAlignment="Left" Height="28" Margin="38,138,0,0" VerticalAlignment="Top" Width="61" FontFamily="Brush Script MT" FontSize="18"/>
-        <Label Content="Password" HorizontalAlignment="Left" Height="28" Margin="38,171,0,0" VerticalAlignment="Top" Width="71" FontFamily="Brush Script MT" FontSize="18"/>
+        <Image Source="/Registration.png" Stretch="Fill"/>
+        <Button x:Name="BtnRegistration" Template="{StaticResource NoMouseOverButtonTemplate}" Content="Register" HorizontalAlignment="Left" Height="31" Margin="152,217,0,0" VerticalAlignment="Top" Width="133" FontSize="24" FontFamily="Algerian" OpacityMask="#FF842C30" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Click="BtnRegistration_Click"/>
+        <TextBox HorizontalAlignment="Left" Height="28" Margin="146,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="254" Background="#FFFDFDFD" BorderBrush="Black"/>
+        <TextBox HorizontalAlignment="Left" Height="28" Margin="146,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="254" Background="White" SelectionTextBrush="White" BorderBrush="Black"/>
+        <TextBox HorizontalAlignment="Left" Height="28" Margin="146,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="254" Background="White" BorderBrush="Black"/>
+        <TextBox HorizontalAlignment="Left" Height="28" Margin="146,171,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="254" Background="White" BorderBrush="Black"/>
+        <Label Content="NikName" HorizontalAlignment="Left" Height="28" Margin="38,72,0,0" VerticalAlignment="Top" Width="86" FontFamily="Algerian" FontSize="18" Foreground="White"/>
+        <Label Content="Birthday" HorizontalAlignment="Left" Height="28" Margin="38,105,0,0" VerticalAlignment="Top" Width="101" FontFamily="Algerian" FontSize="18" Foreground="White"/>
+        <Label Content="Email" HorizontalAlignment="Left" Height="28" Margin="38,138,0,0" VerticalAlignment="Top" Width="71" FontFamily="Algerian" FontSize="18" Foreground="White"/>
+        <Label Content="Password" HorizontalAlignment="Left" Height="28" Margin="38,171,0,0" VerticalAlignment="Top" Width="108" FontFamily="Algerian" FontSize="18" Foreground="White"/>
+
 
     </Grid>
 </Window>

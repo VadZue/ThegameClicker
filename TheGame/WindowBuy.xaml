@@ -5,11 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TheGame"
         mc:Ignorable="d"
-        Title="WindowBuy" Height="450" Width="400">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+        Title="WindowBuy" Height="450" Width="400"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate"   
+                 TargetType="Button">
+            <Border Background="{TemplateBinding Background}"  
+          BorderBrush="{TemplateBinding BorderBrush}"  
+          BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  
+                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Border>
 
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled"  
+             Value="False">
+                    <Setter Property="Background"  
+              Value="{x:Static SystemColors.ControlLightBrush}" />
+                    <Setter Property="Foreground"  
+              Value="{x:Static SystemColors.GrayTextBrush}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid>
+        <Image Source="/Shop.png" Stretch="Fill"/>
+        <Button Content="Back to tawern" Template="{StaticResource NoMouseOverButtonTemplate}" HorizontalAlignment="Center" Height="45" Margin="0,335,0,0" VerticalAlignment="Top" Width="288" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="33" FontFamily="Algerian"/>
+        <Button x:Name="TbByScore" Content="Buy" Template="{StaticResource NoMouseOverButtonTemplate}" HorizontalAlignment="Left" Height="43" Margin="277,34,0,0" VerticalAlignment="Top" Width="54" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" FontFamily="Algerian" FontSize="25"/>
+        <Button Content="Buy" Template="{StaticResource NoMouseOverButtonTemplate}" HorizontalAlignment="Left" Height="43" Margin="277,87,0,0" VerticalAlignment="Top" Width="54" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Algerian" FontSize="25"/>
+        <TextBlock HorizontalAlignment="Center" Height="43" Margin="0,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Center" Height="43" Margin="0,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="171" Foreground="White"/>
     </Grid>
 </Window>

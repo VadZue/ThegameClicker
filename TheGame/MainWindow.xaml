@@ -7,13 +7,37 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate"   
+                 TargetType="Button">
+            <Border Background="{TemplateBinding Background}"  
+                    BorderBrush="{TemplateBinding BorderBrush}"  
+                    BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  
+                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Border>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled"  
+             Value="False">
+                    <Setter Property="Background"  
+              Value="{x:Static SystemColors.ControlLightBrush}" />
+                    <Setter Property="Foreground"  
+              Value="{x:Static SystemColors.GrayTextBrush}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
     <Grid>
-        <Image Source="/MainMenu.png" Stretch="Fill" OpacityMask="Black"/>
-        <Button x:Name="BtnLogin" Content="LogIn" HorizontalAlignment="Left" Height="29" Margin="88,138,0,0" VerticalAlignment="Top" Width="112" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" FontFamily="Brush Script MT" FontSize="20"/>
-        <TextBox x:Name="BtnMail" HorizontalAlignment="Left" Height="21" Margin="67,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" Background="{x:Null}" Foreground="White" BorderBrush="Red"/>
-        <TextBox x:Name="BtnPassword" HorizontalAlignment="Left" Height="21" Margin="67,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" Background="{x:Null}" BorderBrush="Red" Foreground="White"/>
-        <Label Content="Mail" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Height="30" Width="38" Background="Black" Foreground="White" RenderTransformOrigin="0.808,0.301" FontFamily="Brush Script MT" FontSize="14"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Height="30" Width="57" Background="Black" Foreground="White" RenderTransformOrigin="0.808,0.301" FontFamily="Brush Script MT" FontSize="15"/>
-        <Button x:Name="BtnForRegistration" Content="Registration" HorizontalAlignment="Left" Margin="88,172,0,0" VerticalAlignment="Top" Height="29" Width="112" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="20" FontFamily="Brush Script MT"/>
+        <Image Source="/MainMenu.png" Stretch="Fill"/>
+        <Button x:Name="BtnLogin" Template="{StaticResource NoMouseOverButtonTemplate}" Content="LogIn" HorizontalAlignment="Left" Height="29" Margin="61,152,0,0" VerticalAlignment="Top" Width="112" Background="{x:Null}" Foreground="White" FontFamily="Algerian" FontSize="20" BorderBrush="White" RenderTransformOrigin="0.366,0.519"/>
+        <TextBox x:Name="BtnMail" HorizontalAlignment="Left" Height="21" Margin="76,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Background="{x:Null}" Foreground="White" BorderBrush="White"/>
+        <TextBox x:Name="BtnPassword" HorizontalAlignment="Left" Height="21" Margin="76,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Background="{x:Null}" BorderBrush="White" Foreground="White"/>
+        <Label Content="Mail" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Height="30" Width="52" Foreground="White" RenderTransformOrigin="0.808,0.301" FontFamily="Algerian" FontSize="14" Background="{x:Null}"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="6,92,0,0" VerticalAlignment="Top" Height="30" Width="70" Background="{x:Null}" Foreground="White" RenderTransformOrigin="0.808,0.301" FontFamily="Algerian" FontSize="11"/>
+        <Button x:Name="BtnForRegistration" Template="{StaticResource NoMouseOverButtonTemplate}" Content="Registration" HorizontalAlignment="Left" Margin="44,211,0,0" VerticalAlignment="Top" Height="29" Width="146" Background="{x:Null}" Foreground="White" FontSize="20" FontFamily="Algerian" BorderBrush="White"/>
+        
+
+
     </Grid>
 </Window>
