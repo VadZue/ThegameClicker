@@ -1,0 +1,16 @@
+Загрузка проекта с Гита
+
+Действия если нету гита:
+
+	1) winget install git
+		Если будет несколько пректов то брать
+	2) winget install Git.Git
+	3) Перезагрузить консоль
+	4) Через cd зайти в нужную папку  в которой будет хранться будуюющий проект
+	5) git clone https://github.com/VadZue/ThegameClicker.git
+		Проверить наличие dotnet (нужна минимум 8 версия) "dotnet --version", если версия старая то нам нужно обновит наш dotenet: winget install Microsoft.DotNet.SDK.8
+	6) winget install Microsoft.DotNet.SDK.8 - Мы скачаем dotnet последней версии
+	7) Перезагрузить консоль
+	8) cd в папку в которой у нас будет проект 
+	8) dotnet run --project (ls **/*.csproj)
+	
