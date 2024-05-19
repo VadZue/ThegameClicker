@@ -36,6 +36,8 @@ public partial class App : Application
         
         foreach (var dbSet in dbSets)
             services.AddScoped(dbSet.PropertyType, provider => dbSet.GetValue(provider.GetService<GameDbContext>()));
+
+        services.AddSingleton<AuthorizedUser>();
     }
 
     public void OnStartup(object sender, StartupEventArgs e)
@@ -43,4 +45,9 @@ public partial class App : Application
         var switcher = new WindowSwitcher(_services);
         switcher.Open<MainWindow>();
     }
+
+}
+public sealed class AuthorizedUser
+{
+    public User Instance { get; set; }
 }

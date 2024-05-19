@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TheGame.Database;
+using TheGame.DependencyInjection;
 
 namespace TheGame;
 
@@ -21,28 +22,43 @@ namespace TheGame;
 /// </summary>
 public partial class MainWindow : Window
 {
+    WindowSwitcher _sw;
+    GameDbContext _db;
+    AuthorizedUser _user;
 
-    public MainWindow()
+    public MainWindow(GameDbContext db, WindowSwitcher open, AuthorizedUser user)
+    {
+       _sw = open;
+       _db = db;
+       _user = user;    
+      
+        InitializeComponent();
+    }
+
+    private void BtnLogin_Click(object sender, RoutedEventArgs e)
     {
         try
         {
-            var db = GameDbContext.Db;
-            var user = new User()
-            {
-                Birthday = new DateTime(2024, 11, 13),
-                Email = "vad@gamil.com",
-                Password = "12345",
-                NikName = "Vadim"
-            };
-            db.Users.Add(user);
-            db.SaveChanges();
-            var b = db.Users.ToList();
-            InitializeComponent();
+            var exists = _db.Users.SingleOrDefault(x => x.Email == BtnMail.Text && x.Password == BtnPassword.Text);
+            if (exists != null)
+            {             
+                _user.Instance = exists;
+                _sw.Open<WindowShop>(this);
+                return;                
+            }
+            MessageBox.Show("Неверный логи или пароль!");
         }
-        catch(Exception ex)
+        catch (Exception a)
         {
-
+            MessageBox.Show(a.Message);
+            throw;
         }
-       
+
+   
+    }
+
+    private void BtnForRegistration_Click(object sender, RoutedEventArgs e)
+    {
+        _sw.Open<WindowForRegistration>(this);
     }
 }

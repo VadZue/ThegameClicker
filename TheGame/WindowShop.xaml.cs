@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TheGame.Database;
+using TheGame.DependencyInjection;
 
 namespace TheGame
 {
@@ -19,9 +21,22 @@ namespace TheGame
     /// </summary>
     public partial class WindowShop : Window
     {
-        public WindowShop()
+        WindowSwitcher _sw;
+
+        public WindowShop(WindowSwitcher open)
         {
+            _sw = open;
             InitializeComponent();
+        }
+
+        private void BtnForFight_Click(object sender, RoutedEventArgs e)
+        {           
+            _sw.Open<WindowFight>(this);
+        }
+
+        private void BtnBuy_Click(object sender, RoutedEventArgs e)
+        {
+            _sw.Open<WindowBuy>(this);
         }
     }
 }

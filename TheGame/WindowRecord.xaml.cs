@@ -23,5 +23,10 @@ namespace TheGame
         {
             InitializeComponent();
         }
+
+        private void TopGamers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

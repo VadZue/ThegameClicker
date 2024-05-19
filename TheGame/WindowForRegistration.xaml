@@ -31,10 +31,10 @@
     <Grid>
         <Image Source="/Registration.png" Stretch="Fill"/>
         <Button x:Name="BtnRegistration" Template="{StaticResource NoMouseOverButtonTemplate}" Content="Register" HorizontalAlignment="Left" Height="31" Margin="152,217,0,0" VerticalAlignment="Top" Width="133" FontSize="24" FontFamily="Algerian" OpacityMask="#FF842C30" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Click="BtnRegistration_Click"/>
-        <TextBox HorizontalAlignment="Left" Height="28" Margin="146,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="254" Background="#FFFDFDFD" BorderBrush="Black"/>
-        <TextBox HorizontalAlignment="Left" Height="28" Margin="146,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="254" Background="White" SelectionTextBrush="White" BorderBrush="Black"/>
-        <TextBox HorizontalAlignment="Left" Height="28" Margin="146,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="254" Background="White" BorderBrush="Black"/>
-        <TextBox HorizontalAlignment="Left" Height="28" Margin="146,171,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="254" Background="White" BorderBrush="Black"/>
+        <TextBox x:Name="TbNikname" HorizontalAlignment="Left" Height="28" Margin="146,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="254" Background="#FFFDFDFD" BorderBrush="Black"/>
+        <TextBox x:Name="TbBirthday" HorizontalAlignment="Left" Height="28" Margin="146,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="254" Background="White" SelectionTextBrush="White" BorderBrush="Black"/>
+        <TextBox x:Name="TbEmail" HorizontalAlignment="Left" Height="28" Margin="146,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="254" Background="White" BorderBrush="Black"/>
+        <TextBox x:Name="TbPass" HorizontalAlignment="Left" Height="28" Margin="146,171,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="254" Background="White" BorderBrush="Black"/>
         <Label Content="NikName" HorizontalAlignment="Left" Height="28" Margin="38,72,0,0" VerticalAlignment="Top" Width="86" FontFamily="Algerian" FontSize="18" Foreground="White"/>
         <Label Content="Birthday" HorizontalAlignment="Left" Height="28" Margin="38,105,0,0" VerticalAlignment="Top" Width="101" FontFamily="Algerian" FontSize="18" Foreground="White"/>
         <Label Content="Email" HorizontalAlignment="Left" Height="28" Margin="38,138,0,0" VerticalAlignment="Top" Width="71" FontFamily="Algerian" FontSize="18" Foreground="White"/>

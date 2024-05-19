@@ -19,7 +19,7 @@
 
             <ControlTemplate.Triggers>
                 <Trigger Property="IsEnabled"  
-             Value="False">
+             Value="True">
                     <Setter Property="Background"  
               Value="{x:Static SystemColors.ControlLightBrush}" />
                     <Setter Property="Foreground"  
@@ -29,9 +29,9 @@
         </ControlTemplate>
     </Window.Resources>
     <Grid>
-        <Image Source="/ShopMenu.png" Stretch="Fill"/>
-        <Button x:Name="BtnBuy" Template="{StaticResource NoMouseOverButtonTemplate}" Content="Button" HorizontalAlignment="Left" Height="285" Margin="444,127,0,0" VerticalAlignment="Top" Width="238" Background="{x:Null}" BorderBrush="White"/>
-        <Button x:Name="BtnForFight" Template="{StaticResource NoMouseOverButtonTemplate}" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="285" Margin="105,127,0,0" VerticalAlignment="Top" Width="230" Background="{x:Null}"/>
+        <Image Source="/ShopMenu.png" Stretch="Fill" />
+        <Button x:Name="BtnBuy" Template="{StaticResource NoMouseOverButtonTemplate}" Content="Button" HorizontalAlignment="Left" Height="285" Margin="453,99,0,0" VerticalAlignment="Top" Width="238" Background="{x:Null}" BorderBrush="White" Click="BtnBuy_Click" FontSize="1000" />
+        <Button x:Name="BtnForFight" Template="{StaticResource NoMouseOverButtonTemplate}" Content="Button"  BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="285" Margin="99,99,0,0" VerticalAlignment="Top" Width="230" Background="{x:Null}" Click="BtnForFight_Click" FontSize="1000"/>
 
     </Grid>
 </Window>

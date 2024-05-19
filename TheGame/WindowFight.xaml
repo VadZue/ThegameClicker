@@ -30,8 +30,8 @@
     </Window.Resources>
     <Grid>
         <Image Source="/FightMenu.png" Stretch="Fill"/>
-        <Button Content="" HorizontalAlignment="Center" Template="{StaticResource NoMouseOverButtonTemplate}" Height="303" Margin="0,96,0,0" VerticalAlignment="Top" Width="530" Background="{x:Null}" Click="Button_Click" Foreground="{x:Null}" BorderBrush="#FF707070" />
-        <Button x:Name="BtnTawern_Копировать" Template="{StaticResource NoMouseOverButtonTemplate}" Content="Back to Tawern" HorizontalAlignment="Left" Height="41" Margin="10,10,0,0" VerticalAlignment="Top" Width="231" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Algerian" FontSize="25"/>
+        <Button Content="1231234" HorizontalAlignment="Center" Template="{StaticResource NoMouseOverButtonTemplate}" Height="303" Margin="0,96,0,0" VerticalAlignment="Top" Width="530" Background="{x:Null}" Click="Button_Click" Foreground="{x:Null}" BorderBrush="#FF707070" FontSize="35791" />
+        <Button x:Name="BtnTawern_Копировать" Template="{StaticResource NoMouseOverButtonTemplate}" Content="Back to Tawern" HorizontalAlignment="Left" Height="41" Margin="10,10,0,0" VerticalAlignment="Top" Width="231" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Algerian" FontSize="25" Click="BtnTawern_Копировать_Click"/>
         <Label Content="Score" HorizontalAlignment="Left" Height="41" Margin="533,10,0,0" VerticalAlignment="Top" Width="97" Background="{x:Null}" Foreground="White" FontFamily="Algerian" FontSize="27"/>
         <Label Content="Money" HorizontalAlignment="Left" Height="41" Margin="533,51,0,0" VerticalAlignment="Top" Width="97" Background="{x:Null}" Foreground="White" FontFamily="Algerian" FontSize="27"/>
         <TextBlock x:Name="TbForScore" HorizontalAlignment="Left" Margin="635,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="32" Width="155" Foreground="White" FontSize="27" FontFamily="Algerian"/>

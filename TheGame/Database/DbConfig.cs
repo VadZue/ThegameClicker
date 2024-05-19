@@ -11,10 +11,14 @@ public sealed class GameDbContext : DbContext
 {
     public GameDbContext(DbContextOptions<GameDbContext> options) : base(options) 
     {
+      
         _ = Database.EnsureCreated();
+
     }
 
     public DbSet<User> Users { get; set; }
+
+    
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -34,7 +38,7 @@ public sealed class GameDbContext : DbContext
                 skill.Property(s => s.UpgradeCost).HasDefaultValue(1000);
             });
 
-        modelBuilder.Entity<User>().HasAlternateKey(x => x.Email);
+
     }
 }
 
@@ -59,9 +63,9 @@ public class User
     
     public Skill ScoreSkill { get; set; }
 
-    public void UpgradeMoneySkill() => UpgradeSkill(MoneySkill ??= new());
+    public void UpgradeMoneySkill() => UpgradeSkill(MoneySkill);
 
-    public void UpgradeScoreSkill() => UpgradeSkill(ScoreSkill ??= new());
+    public void UpgradeScoreSkill() => UpgradeSkill(ScoreSkill);
 
     private void UpgradeSkill(Skill skill)
     {
@@ -72,13 +76,21 @@ public class User
         skill.UpgradeCost += 1000;
         skill.Up += 1;
     }
+
+    public void Click()
+    {
+        Money += MoneySkill.Up;
+        Score += ScoreSkill.Up;
+    }
 }
 
 
 [Owned]
 public class Skill
 {
-    public float Up { get; set; }
+    public int Up { get; set; }
 
     public long UpgradeCost { get; set; }
+
+
 }

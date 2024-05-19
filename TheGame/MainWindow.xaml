@@ -30,12 +30,12 @@
     </Window.Resources>
     <Grid>
         <Image Source="/MainMenu.png" Stretch="Fill"/>
-        <Button x:Name="BtnLogin" Template="{StaticResource NoMouseOverButtonTemplate}" Content="LogIn" HorizontalAlignment="Left" Height="29" Margin="61,152,0,0" VerticalAlignment="Top" Width="112" Background="{x:Null}" Foreground="White" FontFamily="Algerian" FontSize="20" BorderBrush="White" RenderTransformOrigin="0.366,0.519"/>
+        <Button x:Name="BtnLogin" Template="{StaticResource NoMouseOverButtonTemplate}" Content="LogIn" HorizontalAlignment="Left" Height="29" Margin="61,152,0,0" VerticalAlignment="Top" Width="112" Background="{x:Null}" Foreground="White" FontFamily="Algerian" FontSize="20" BorderBrush="White" RenderTransformOrigin="0.366,0.519" Click="BtnLogin_Click"/>
         <TextBox x:Name="BtnMail" HorizontalAlignment="Left" Height="21" Margin="76,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Background="{x:Null}" Foreground="White" BorderBrush="White"/>
         <TextBox x:Name="BtnPassword" HorizontalAlignment="Left" Height="21" Margin="76,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Background="{x:Null}" BorderBrush="White" Foreground="White"/>
         <Label Content="Mail" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Height="30" Width="52" Foreground="White" RenderTransformOrigin="0.808,0.301" FontFamily="Algerian" FontSize="14" Background="{x:Null}"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="6,92,0,0" VerticalAlignment="Top" Height="30" Width="70" Background="{x:Null}" Foreground="White" RenderTransformOrigin="0.808,0.301" FontFamily="Algerian" FontSize="11"/>
-        <Button x:Name="BtnForRegistration" Template="{StaticResource NoMouseOverButtonTemplate}" Content="Registration" HorizontalAlignment="Left" Margin="44,211,0,0" VerticalAlignment="Top" Height="29" Width="146" Background="{x:Null}" Foreground="White" FontSize="20" FontFamily="Algerian" BorderBrush="White"/>
+        <Button x:Name="BtnForRegistration" Template="{StaticResource NoMouseOverButtonTemplate}" Content="Registration" HorizontalAlignment="Left" Margin="44,211,0,0" VerticalAlignment="Top" Height="29" Width="146" Background="{x:Null}" Foreground="White" FontSize="20" FontFamily="Algerian" BorderBrush="White" Click="BtnForRegistration_Click"/>
         
 
 
