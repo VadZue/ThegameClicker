@@ -37,6 +37,7 @@
         <Label Content="Password" HorizontalAlignment="Left" Margin="6,92,0,0" VerticalAlignment="Top" Height="30" Width="70" Background="{x:Null}" Foreground="White" RenderTransformOrigin="0.808,0.301" FontFamily="Algerian" FontSize="11"/>
         <Button x:Name="BtnForRegistration" Template="{StaticResource NoMouseOverButtonTemplate}" Content="Registration" HorizontalAlignment="Left" Margin="44,175,0,0" VerticalAlignment="Top" Height="29" Width="146" Background="{x:Null}" Foreground="White" FontSize="20" FontFamily="Algerian" BorderBrush="White" Click="BtnForRegistration_Click"/>
         <Button x:Name="TbTop" Template="{StaticResource NoMouseOverButtonTemplate}" Content="Top Users" HorizontalAlignment="Left" Height="31" Margin="44,209,0,0" VerticalAlignment="Top" Width="146" Background="{x:Null}" BorderBrush="White" Foreground="White" FontFamily="Algerian" FontSize="20" Click="TbTop_Click" RenderTransformOrigin="0.517,0.176"/>
+        <Image Margin="549,27,10,293" Source="/Remove-bg.ai_1717102966369.png" Stretch="Fill"/>
 
 
 

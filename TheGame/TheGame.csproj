@@ -7,16 +7,28 @@
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="1234.png" />
+    <None Remove="134.png" />
     <None Remove="MainMenu.png" />
+    <None Remove="mmm1.png" />
+    <None Remove="pers.png" />
+    <None Remove="prod1.png" />
     <None Remove="Records.png" />
     <None Remove="Registration.png" />
+    <None Remove="Remove-bg.ai_1717102966369.png" />
     <None Remove="Shop.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="1234.png" />
+    <Resource Include="134.png" />
     <Resource Include="FightMenu.png" />
     <Resource Include="MainMenu.png" />
+    <Resource Include="mmm1.png" />
+    <Resource Include="pers.png" />
+    <Resource Include="prod1.png" />
     <Resource Include="Records.png" />
     <Resource Include="Registration.png" />
+    <Resource Include="Remove-bg.ai_1717102966369.png" />
     <Resource Include="Shop.png" />
   </ItemGroup>
   <ItemGroup>

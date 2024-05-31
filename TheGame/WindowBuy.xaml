@@ -35,5 +35,16 @@
         <Button x:Name="TbByMoney" Content="Buy" Template="{StaticResource NoMouseOverButtonTemplate}" HorizontalAlignment="Left" Height="43" Margin="277,87,0,0" VerticalAlignment="Top" Width="54" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Algerian" FontSize="25" Click="TbByMoney_Click"/>
         <TextBlock x:Name="TbForScore" HorizontalAlignment="Center" Height="43" Margin="0,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172" Foreground="White"/>
         <TextBlock x:Name="TbForMoney" HorizontalAlignment="Center" Height="43" Margin="0,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="171" Foreground="White"/>
+        <Image Margin="56,34,297,347" Source="/1234.png" Stretch="Fill"/>
+        <Image Margin="6,68,291,288" Source="/134.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="28.724"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
     </Grid>
 </Window>
